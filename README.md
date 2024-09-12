@@ -1,7 +1,5 @@
 ComfyUI 高质量工作流收集
-
 本项目收集并整理了使用 ComfyUI 的各类高质量工作流，帮助开发者和用户快速部署并提升用户体验。通过这些工作流，您可以在 AI 绘图中更高效地实现自定义功能。
-
 目录
 项目背景
 特性
@@ -20,14 +18,12 @@ ComfyUI 是一款广受欢迎的 AI 作图工具，支持多种模型与工作�
 安装与配置
 依赖
 请确保已经安装以下依赖：
-
 Python 3.8+
 ComfyUI 最新版本
 安装步骤
 # 克隆项目
 git clone https://github.com/your-repo/comfyui-workflows.git
 cd comfyui-workflows
-
 # 安装依赖
 pip install -r requirements.txt
 
