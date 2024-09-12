@@ -26,7 +26,6 @@ git clone https://github.com/your-repo/comfyui-workflows.git
 cd comfyui-workflows
 # 安装依赖
 pip install -r requirements.txt
-
 贡献指南
 我们欢迎社区的贡献！请阅读 贡献指南 了解如何提交新工作流或改进现有工作流。
 Fork 本项目
