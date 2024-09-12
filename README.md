@@ -35,7 +35,7 @@ ComfyUI 是一款广受欢迎的 AI 作图工具，支持多种模型与工作�
 请确保已经安装以下依赖：
 - Python 3.8+
 - ComfyUI 最新版本
-🤝 贡献指南
+## 🤝 贡献指南
 我们欢迎社区的贡献！请阅读以下步骤来参与贡献：
 1. Fork 本项目 🍴
 2. 创建功能分支 (`git checkout -b feature/your-feature`) 🌱
