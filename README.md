@@ -25,11 +25,11 @@ ComfyUI 是一款广受欢迎的 AI 作图工具，支持多种模型与工作�
 | ------------ | ----------------------------------------- | ---------- |
 | **FLUX**     | 多节点并行处理，数据流可视化工作流        | [查看详情](https://github.com/LustsAI/ComfyUI-Collection/tree/main/FLUX) |
 | **人像**     | 高清人像生成，支持风格化处理              | [查看详情](https://github.com/LustsAI/ComfyUI-Collection/tree/main/人像) |
-| **工具类**   | 图像处理工具，包括裁剪、颜色校正等        | [查看详情]() |
-| **建筑设计** | 建筑平面图生成三维模型与渲染              | [查看详情]() |
-| **电商**     | 产品图像优化，一键生成高质量展示图        | [查看详情]() |
-| **视频**     | 自动视频剪辑与特效                        | [查看详情]() |
-| **音频**     | 自动音频剪辑与混音                        | [查看详情]() |
+| **工具类**   | 图像处理工具，包括裁剪、颜色校正等        | [查看详情](https://github.com/LustsAI/ComfyUI-Collection/tree/main/工具类) |
+| **建筑设计** | 建筑平面图生成三维模型与渲染              | [查看详情](https://github.com/LustsAI/ComfyUI-Collection/tree/main/建筑设计) |
+| **电商**     | 产品图像优化，一键生成高质量展示图        | [查看详情](https://github.com/LustsAI/ComfyUI-Collection/tree/main/电商) |
+| **视频**     | 自动视频剪辑与特效                        | [查看详情](https://github.com/LustsAI/ComfyUI-Collection/tree/main/视频) |
+| **音频**     | 自动音频剪辑与混音                        | [查看详情](https://github.com/LustsAI/ComfyUI-Collection/tree/main/音频) |
 
 # 安装与配置
 请确保已经安装以下依赖：
