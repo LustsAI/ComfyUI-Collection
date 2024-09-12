@@ -1,5 +1,5 @@
 <p align="center"> <img src="https://drive.google.com/uc?export=view&id=1qVTIwBGZRbkS4Q16A8T1fDOtMUJqe2nl" width="80"> 
-</p> <h1 align="center">AI-Collection</h1> <h3 align="center">ComfyUI 高质量工作流收集</h3> 
+</p> <h1 align="center">ComfyUI-Collection</h1> <h3 align="center">ComfyUI 高质量工作流收集</h3> 
 <p align="center"> 🎨 资源共享 | 🤖 高效工作流 | 🌍 社区驱动 </p>
 
 ## ComfyUI 高质量工作流收集
