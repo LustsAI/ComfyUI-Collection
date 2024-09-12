@@ -1,3 +1,4 @@
+<p align="center"><img src="[https://github.com/LustsAI/ComfyUI-Collection/edit/main/assets/ComfyUI_temp_pxipc_00034_-removebg-preview.png)" width="80" ></p>
 # ComfyUI 高质量工作流收集
 本项目收集并整理了使用 ComfyUI 的各类高质量工作流，帮助开发者和用户快速部署并提升用户体验。通过这些工作流，您可以在 AI 绘图中更高效地实现自定义功能。
 目录
