@@ -48,5 +48,5 @@ MIT License
 
 Copyright (c) [2024] [LuckyCn]
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions...
 
+<p align="center">💡 让创意更简单，探索 AI 绘图的无限可能！</p> 
