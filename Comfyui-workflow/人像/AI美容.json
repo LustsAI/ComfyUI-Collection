@@ -1,0 +1,675 @@
+{
+  "last_node_id": 13,
+  "last_link_id": 24,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [
+        633.0388364397047,
+        -183.921357717653
+      ],
+      "size": {
+        "0": 1271.4281005859375,
+        "1": 1249.9046630859375
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            1,
+            3,
+            13,
+            14,
+            16
+          ],
+          "shape": 3,
+          "label": "图像",
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "surenjike_A_beautiful_Chinese_girl_with_long_hair_wearing_an_ex_3efb0254-2f81-4ae7-b951-57bef8989647 (9).png",
+        "image"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "ColorCorrect",
+      "pos": [
+        2187.7699940292946,
+        -299.4553001677038
+      ],
+      "size": {
+        "0": 400,
+        "1": 180
+      },
+      "flags": {
+        "pinned": true,
+        "collapsed": false
+      },
+      "order": 7,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 16,
+          "label": "图像",
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            20
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ColorCorrect"
+      },
+      "widgets_values": [
+        -25,
+        -5,
+        3,
+        10,
+        5,
+        1
+      ],
+      "color": "#000a43",
+      "bgcolor": "#001e57"
+    },
+    {
+      "id": 12,
+      "type": "Any Switch (rgthree)",
+      "pos": [
+        2673.1694316667117,
+        -496.00000000000006
+      ],
+      "size": {
+        "0": 210,
+        "1": 106
+      },
+      "flags": {
+        "collapsed": true,
+        "pinned": false
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "any_01",
+          "type": "IMAGE",
+          "link": 20,
+          "label": "输入_01",
+          "dir": 3
+        },
+        {
+          "name": "any_02",
+          "type": "IMAGE",
+          "link": 21,
+          "label": "输入_02",
+          "dir": 3
+        },
+        {
+          "name": "any_03",
+          "type": "IMAGE",
+          "link": 22,
+          "label": "输入_03",
+          "dir": 3
+        },
+        {
+          "name": "any_04",
+          "type": "IMAGE",
+          "link": 23,
+          "label": "输入_04",
+          "dir": 3
+        },
+        {
+          "name": "any_05",
+          "type": "IMAGE",
+          "link": 24,
+          "label": "输入_05",
+          "dir": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "IMAGE",
+          "links": [
+            19
+          ],
+          "shape": 3,
+          "label": "IMAGE",
+          "dir": 4,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Any Switch (rgthree)"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 8,
+      "type": "ColorCorrect",
+      "pos": [
+        2202.71585784725,
+        1003.9073972364068
+      ],
+      "size": {
+        "0": 400,
+        "1": 180
+      },
+      "flags": {
+        "pinned": true,
+        "collapsed": false
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 14,
+          "label": "图像",
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            24
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ColorCorrect"
+      },
+      "widgets_values": [
+        10,
+        0,
+        -12,
+        25,
+        5,
+        1
+      ],
+      "color": "#000a43",
+      "bgcolor": "#001e57"
+    },
+    {
+      "id": 1,
+      "type": "ColorCorrect",
+      "pos": [
+        2195.8634313889997,
+        68.32767312466765
+      ],
+      "size": {
+        "0": 400,
+        "1": 180
+      },
+      "flags": {
+        "pinned": true,
+        "collapsed": false
+      },
+      "order": 3,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 1,
+          "label": "图像",
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            21
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ColorCorrect"
+      },
+      "widgets_values": [
+        30,
+        0,
+        -2,
+        20,
+        10,
+        1
+      ],
+      "color": "#000a43",
+      "bgcolor": "#001e57"
+    },
+    {
+      "id": 7,
+      "type": "ColorCorrect",
+      "pos": [
+        2202.4317156945,
+        690.4760477528453
+      ],
+      "size": {
+        "0": 400,
+        "1": 180
+      },
+      "flags": {
+        "pinned": true,
+        "collapsed": false
+      },
+      "order": 5,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 13,
+          "label": "图像",
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            23
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ColorCorrect"
+      },
+      "widgets_values": [
+        0,
+        -5,
+        8,
+        25,
+        15,
+        1
+      ],
+      "color": "#000a43",
+      "bgcolor": "#001e57"
+    },
+    {
+      "id": 5,
+      "type": "Fast Groups Muter (rgthree)",
+      "pos": {
+        "0": 1547,
+        "1": -695,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 500,
+        "1": 250
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": [],
+          "label": "可选连接",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "matchColors": "",
+        "matchTitle": "",
+        "showNav": true,
+        "sort": "custom alphabet",
+        "customSortAlphabet": "图主细手上自遮参",
+        "toggleRestriction": "default"
+      },
+      "color": "#222",
+      "bgcolor": "#000",
+      "shape": 1
+    },
+    {
+      "id": 3,
+      "type": "SaveImage",
+      "pos": [
+        2875,
+        -454
+      ],
+      "size": {
+        "0": 1498.257080078125,
+        "1": 1484.088623046875
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 19,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "ColorCorrect",
+      "pos": [
+        2192,
+        376
+      ],
+      "size": {
+        "0": 400,
+        "1": 180
+      },
+      "flags": {
+        "pinned": true,
+        "collapsed": false
+      },
+      "order": 4,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 3,
+          "label": "图像",
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            22
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ColorCorrect"
+      },
+      "widgets_values": [
+        -25,
+        -5,
+        8,
+        10,
+        0,
+        1
+      ],
+      "color": "#000a43",
+      "bgcolor": "#001e57"
+    },
+    {
+      "id": 13,
+      "type": "Note",
+      "pos": [
+        1126,
+        -669
+      ],
+      "size": {
+        "0": 296.20526123046875,
+        "1": 127.03730010986328
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 2,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "选择一键风格色调\n开关即可一键调色，已经预设了四种常用：\n冷色，暖色，美拉德，质感\n\n支持自定义：打开一键自定义即可自行调色。\nAIX让人类更高效！\n"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      1,
+      0,
+      "IMAGE"
+    ],
+    [
+      3,
+      2,
+      0,
+      4,
+      0,
+      "IMAGE"
+    ],
+    [
+      13,
+      2,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ],
+    [
+      14,
+      2,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      16,
+      2,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      19,
+      12,
+      0,
+      3,
+      0,
+      "IMAGE"
+    ],
+    [
+      20,
+      10,
+      0,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      21,
+      1,
+      0,
+      12,
+      1,
+      "IMAGE"
+    ],
+    [
+      22,
+      4,
+      0,
+      12,
+      2,
+      "IMAGE"
+    ],
+    [
+      23,
+      7,
+      0,
+      12,
+      3,
+      "IMAGE"
+    ],
+    [
+      24,
+      8,
+      0,
+      12,
+      4,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "AI人像摄影-快速调色",
+      "bounding": [
+        512,
+        -415,
+        1612,
+        1623
+      ],
+      "color": "#3f789e",
+      "font_size": 100,
+      "locked": true
+    },
+    {
+      "title": "调色结果",
+      "bounding": [
+        2656,
+        -698,
+        1816,
+        1896
+      ],
+      "color": "#3f789e",
+      "font_size": 100,
+      "locked": true
+    },
+    {
+      "title": "一键暖色调",
+      "bounding": [
+        2148,
+        -69,
+        496,
+        340
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": true
+    },
+    {
+      "title": "一键冷色调",
+      "bounding": [
+        2146,
+        282,
+        499,
+        300
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": true
+    },
+    {
+      "title": "一键质感",
+      "bounding": [
+        2144,
+        589,
+        503,
+        319
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": true
+    },
+    {
+      "title": "一键美拉德",
+      "bounding": [
+        2143,
+        918,
+        501,
+        275
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": true
+    },
+    {
+      "title": "一键自定义",
+      "bounding": [
+        2148,
+        -407,
+        489,
+        333
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": true
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.4950000000000006,
+      "offset": {
+        "0": 722.9539076845826,
+        "1": 825.2398986387241
+      }
+    }
+  },
+  "version": 0.4
+}

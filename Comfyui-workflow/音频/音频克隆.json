@@ -1,0 +1,297 @@
+{
+  "last_node_id": 8,
+  "last_link_id": 11,
+  "nodes": [
+    {
+      "id": 6,
+      "type": "ExperienceNode",
+      "pos": [
+        1062,
+        454
+      ],
+      "size": {
+        "0": 315,
+        "1": 178
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CONFIG",
+          "type": "CONFIG",
+          "links": [
+            11
+          ],
+          "shape": 3,
+          "label": "CONFIG"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ExperienceNode"
+      },
+      "widgets_values": [
+        "aifsh",
+        "v2",
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "id": 3,
+      "type": "TextDictNode",
+      "pos": [
+        108,
+        340
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "TEXTDICT",
+          "type": "TEXTDICT",
+          "links": [
+            9
+          ],
+          "shape": 3,
+          "label": "TEXTDICT"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TextDictNode"
+      },
+      "widgets_values": [
+        "",
+        "English",
+        true
+      ]
+    },
+    {
+      "id": 8,
+      "type": "GSVTTSNode",
+      "pos": [
+        619,
+        72
+      ],
+      "size": {
+        "0": 315,
+        "1": 262
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_dict",
+          "type": "TEXTDICT",
+          "link": 8,
+          "slot_index": 0,
+          "label": "text_dict"
+        },
+        {
+          "name": "prompt_text_dict",
+          "type": "TEXTDICT",
+          "link": 9,
+          "slot_index": 1,
+          "label": "prompt_text_dict"
+        },
+        {
+          "name": "prompt_audio",
+          "type": "AUDIO",
+          "link": 10,
+          "slot_index": 2,
+          "label": "prompt_audio"
+        },
+        {
+          "name": "config",
+          "type": "CONFIG",
+          "link": 11,
+          "slot_index": 3,
+          "label": "config"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            7
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "AUDIO"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GSVTTSNode"
+      },
+      "widgets_values": [
+        "gsv-v2final-pretrained/s1bert25hz-5kh-longer-epoch=12-step=369668.ckpt",
+        "gsv-v2final-pretrained/s2G2333k.pth",
+        "No slice",
+        1,
+        15,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "type": "TextDictNode",
+      "pos": [
+        108,
+        86
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "TEXTDICT",
+          "type": "TEXTDICT",
+          "links": [
+            8
+          ],
+          "shape": 3,
+          "label": "TEXTDICT"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TextDictNode"
+      },
+      "widgets_values": [
+        "hello，this is my home，i am very angry,you know that?,a son of bitch kill my dog",
+        "English",
+        true
+      ]
+    },
+    {
+      "id": 4,
+      "type": "LoadAudio",
+      "pos": [
+        673,
+        417
+      ],
+      "size": {
+        "0": 315,
+        "1": 124
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            10
+          ],
+          "shape": 3,
+          "label": "音频"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "御姐音.MP3",
+        null,
+        ""
+      ]
+    },
+    {
+      "id": 7,
+      "type": "PreviewAudio",
+      "pos": [
+        1091,
+        101
+      ],
+      "size": {
+        "0": 315,
+        "1": 76
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 7,
+          "label": "音频"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": [
+        null
+      ]
+    }
+  ],
+  "links": [
+    [
+      7,
+      8,
+      0,
+      7,
+      0,
+      "AUDIO"
+    ],
+    [
+      8,
+      2,
+      0,
+      8,
+      0,
+      "TEXTDICT"
+    ],
+    [
+      9,
+      3,
+      0,
+      8,
+      1,
+      "TEXTDICT"
+    ],
+    [
+      10,
+      4,
+      0,
+      8,
+      2,
+      "AUDIO"
+    ],
+    [
+      11,
+      6,
+      0,
+      8,
+      3,
+      "CONFIG"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.210000000000001,
+      "offset": [
+        44.03550057980389,
+        123.97656280347924
+      ]
+    }
+  },
+  "version": 0.4
+}

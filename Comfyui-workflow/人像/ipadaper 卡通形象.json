@@ -1,0 +1,954 @@
+{
+  "last_node_id": 742,
+  "last_link_id": 1050,
+  "nodes": [
+    {
+      "id": 701,
+      "type": "EmptyLatentImage",
+      "pos": [
+        1242,
+        940
+      ],
+      "size": {
+        "0": 210,
+        "1": 106
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            1030
+          ],
+          "slot_index": 0,
+          "label": "Latent"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        1
+      ]
+    },
+    {
+      "id": 702,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1202,
+        588
+      ],
+      "size": {
+        "0": 272.8190002441406,
+        "1": 114.45344543457031
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1049,
+          "slot_index": 0,
+          "label": "CLIP"
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 1015,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            995
+          ],
+          "slot_index": 0,
+          "label": "条件"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 703,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1216,
+        758
+      ],
+      "size": {
+        "0": 238.4415740966797,
+        "1": 122.9353256225586
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1050,
+          "label": "CLIP"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            996
+          ],
+          "slot_index": 0,
+          "label": "条件"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "disproportional, Octane render, smudge, blurred, Low resolution, worst quality"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 711,
+      "type": "IPAdapter",
+      "pos": [
+        1217.3332562255864,
+        219.15561721801762
+      ],
+      "size": {
+        "0": 218.8667755126953,
+        "1": 190
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1032,
+          "label": "模型",
+          "slot_index": 0
+        },
+        {
+          "name": "ipadapter",
+          "type": "IPADAPTER",
+          "link": 1033,
+          "slot_index": 1
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 1001,
+          "label": "图像"
+        },
+        {
+          "name": "attn_mask",
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1036
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "模型"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IPAdapter"
+      },
+      "widgets_values": [
+        1,
+        0,
+        1,
+        "standard"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 704,
+      "type": "VAEDecode",
+      "pos": [
+        1548,
+        510
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 991,
+          "label": "Latent"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 1029,
+          "slot_index": 1,
+          "label": "VAE"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            993
+          ],
+          "slot_index": 0,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 720,
+      "type": "StringFunction|pysssss",
+      "pos": [
+        809,
+        799
+      ],
+      "size": {
+        "0": 400,
+        "1": 243.99998474121094
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_a",
+          "type": "STRING",
+          "link": 1045,
+          "widget": {
+            "name": "text_a"
+          },
+          "label": "文本_A",
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            1015
+          ],
+          "shape": 3,
+          "label": "字符串",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringFunction|pysssss"
+      },
+      "widgets_values": [
+        "append",
+        "yes",
+        "",
+        "",
+        "",
+        "Eating dumplings, taking chopsticks.\n\n"
+      ]
+    },
+    {
+      "id": 705,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        510,
+        608
+      ],
+      "size": {
+        "0": 343.69647216796875,
+        "1": 122
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1046
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "模型"
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            1048
+          ],
+          "shape": 3,
+          "slot_index": 1,
+          "label": "CLIP"
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            1029
+          ],
+          "shape": 3,
+          "slot_index": 2,
+          "label": "VAE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "albedobaseXL_v21.safetensors",
+        null
+      ]
+    },
+    {
+      "id": 742,
+      "type": "LoraLoader",
+      "pos": [
+        899,
+        524
+      ],
+      "size": {
+        "0": 210,
+        "1": 150
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1046,
+          "label": "模型"
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1048,
+          "label": "CLIP",
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1047
+          ],
+          "shape": 3,
+          "label": "模型",
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            1049,
+            1050
+          ],
+          "shape": 3,
+          "label": "CLIP",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "Samaritan 3d Cartoon SDXL .safetensors",
+        1,
+        1,
+        null
+      ]
+    },
+    {
+      "id": 708,
+      "type": "KSampler",
+      "pos": [
+        1530,
+        602
+      ],
+      "size": {
+        "0": 315,
+        "1": 474
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1039,
+          "slot_index": 0,
+          "label": "模型"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 995,
+          "label": "正面条件"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 996,
+          "label": "负面条件"
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 1030,
+          "label": "Latent",
+          "slot_index": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            991
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "Latent"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        877029378754436,
+        "randomize",
+        40,
+        8,
+        "euler",
+        "normal",
+        1
+      ]
+    },
+    {
+      "id": 709,
+      "type": "LoadImage",
+      "pos": [
+        1964,
+        234
+      ],
+      "size": {
+        "0": 288.07281494140625,
+        "1": 314
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            1001,
+            1044
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "图像"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [],
+          "shape": 3,
+          "slot_index": 1,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "pasted/image (229).png",
+        "image"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 706,
+      "type": "SaveImage",
+      "pos": [
+        2326,
+        161
+      ],
+      "size": {
+        "0": 422.6141052246094,
+        "1": 473.0347595214844
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 993,
+          "label": "图像"
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 740,
+      "type": "ArgosTranslateTextNode",
+      "pos": [
+        1900,
+        620
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            1045
+          ],
+          "shape": 3,
+          "label": "文本"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ArgosTranslateTextNode"
+      },
+      "widgets_values": [
+        "zh",
+        "en",
+        "在吃饺子，拿的筷子\n\n"
+      ]
+    },
+    {
+      "id": 734,
+      "type": "IPAdapter",
+      "pos": [
+        1499,
+        223
+      ],
+      "size": {
+        "0": 315,
+        "1": 190
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1037,
+          "label": "模型"
+        },
+        {
+          "name": "ipadapter",
+          "type": "IPADAPTER",
+          "link": 1035,
+          "slot_index": 1
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 1044,
+          "label": "图像",
+          "slot_index": 2
+        },
+        {
+          "name": "attn_mask",
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1039
+          ],
+          "shape": 3,
+          "label": "模型",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IPAdapter"
+      },
+      "widgets_values": [
+        0.5,
+        0,
+        1,
+        "standard"
+      ]
+    },
+    {
+      "id": 732,
+      "type": "IPAdapterUnifiedLoaderFaceID",
+      "pos": [
+        905,
+        237
+      ],
+      "size": {
+        "0": 315,
+        "1": 126
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1047,
+          "label": "model"
+        },
+        {
+          "name": "ipadapter",
+          "type": "IPADAPTER",
+          "link": null,
+          "label": "ipadapter"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1032
+          ],
+          "shape": 3,
+          "label": "MODEL",
+          "slot_index": 0
+        },
+        {
+          "name": "ipadapter",
+          "type": "IPADAPTER",
+          "links": [
+            1033
+          ],
+          "shape": 3,
+          "label": "ipadapter"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IPAdapterUnifiedLoaderFaceID"
+      },
+      "widgets_values": [
+        "FACEID PLUS V2",
+        0.6,
+        "OpenVINO"
+      ]
+    },
+    {
+      "id": 735,
+      "type": "IPAdapterUnifiedLoader",
+      "pos": [
+        1199.3332562255864,
+        467.1556172180176
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1036,
+          "label": "model"
+        },
+        {
+          "name": "ipadapter",
+          "type": "IPADAPTER",
+          "link": null,
+          "label": "ipadapter"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            1037
+          ],
+          "shape": 3,
+          "label": "model",
+          "slot_index": 0
+        },
+        {
+          "name": "ipadapter",
+          "type": "IPADAPTER",
+          "links": [
+            1035
+          ],
+          "shape": 3,
+          "label": "ipadapter"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IPAdapterUnifiedLoader"
+      },
+      "widgets_values": [
+        "STANDARD (medium strength)"
+      ]
+    }
+  ],
+  "links": [
+    [
+      991,
+      708,
+      0,
+      704,
+      0,
+      "LATENT"
+    ],
+    [
+      993,
+      704,
+      0,
+      706,
+      0,
+      "IMAGE"
+    ],
+    [
+      995,
+      702,
+      0,
+      708,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      996,
+      703,
+      0,
+      708,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1001,
+      709,
+      0,
+      711,
+      2,
+      "IMAGE"
+    ],
+    [
+      1015,
+      720,
+      0,
+      702,
+      1,
+      "STRING"
+    ],
+    [
+      1029,
+      705,
+      2,
+      704,
+      1,
+      "VAE"
+    ],
+    [
+      1030,
+      701,
+      0,
+      708,
+      3,
+      "LATENT"
+    ],
+    [
+      1032,
+      732,
+      0,
+      711,
+      0,
+      "MODEL"
+    ],
+    [
+      1033,
+      732,
+      1,
+      711,
+      1,
+      "IPADAPTER"
+    ],
+    [
+      1035,
+      735,
+      1,
+      734,
+      1,
+      "IPADAPTER"
+    ],
+    [
+      1036,
+      711,
+      0,
+      735,
+      0,
+      "MODEL"
+    ],
+    [
+      1037,
+      735,
+      0,
+      734,
+      0,
+      "MODEL"
+    ],
+    [
+      1039,
+      734,
+      0,
+      708,
+      0,
+      "MODEL"
+    ],
+    [
+      1044,
+      709,
+      0,
+      734,
+      2,
+      "IMAGE"
+    ],
+    [
+      1045,
+      740,
+      0,
+      720,
+      0,
+      "STRING"
+    ],
+    [
+      1046,
+      705,
+      0,
+      742,
+      0,
+      "MODEL"
+    ],
+    [
+      1047,
+      742,
+      0,
+      732,
+      0,
+      "MODEL"
+    ],
+    [
+      1048,
+      705,
+      1,
+      742,
+      1,
+      "CLIP"
+    ],
+    [
+      1049,
+      742,
+      1,
+      702,
+      0,
+      "CLIP"
+    ],
+    [
+      1050,
+      742,
+      1,
+      703,
+      0,
+      "CLIP"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "Simple IPAdapter",
+      "bounding": [
+        878,
+        155,
+        910,
+        398
+      ],
+      "color": "#a1309b",
+      "font_size": 24,
+      "locked": false
+    }
+  ],
+  "config": {},
+  "extra": {
+    "info": {
+      "name": "workflow",
+      "author": "",
+      "description": "",
+      "version": "1",
+      "created": "2024-04-06T21:45:15.420Z",
+      "modified": "2024-04-10T18:34:56.800Z",
+      "software": "ComfyUI"
+    }
+  },
+  "version": 0.4
+}
